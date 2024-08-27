@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>消息</title><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name=format-detection content="telephone=no"><meta name=x5-orientation content=portrait><meta name=screen-orientation content=portrait><meta name=360-fullscreen content=true><meta name=full-screen content=true><meta name=apple-mobile-web-app-capable content=yes><meta http-equiv=x-dns-prefetch-control content=on><link rel=dns-prefetch href=https://qqmap-1251316161.file.myqcloud.com><link rel=subresource href=https://qqmap-1251316161.file.myqcloud.com/fe-static/resource/lib/vue.min.js><script>var htmlFontSize = (document.documentElement.clientWidth / 750) * 100 + "px";
+      document.getElementsByTagName("html")[0].style.fontSize = htmlFontSize;</script><style>body{
+        height: 100vh;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      #skeleton {
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+      }
+      .header{
+        box-sizing: border-box;
+        width: 100%;
+        height: 0;
+        font-size: 0.4rem;
+        padding-left: 0.4rem;
+        padding-top: 0.28rem;
+        padding-bottom: 0.28rem;
+        visibility: hidden;
+      }
+      .top-banner {
+        width: 100%;
+        height: 4.06rem;
+        background: url('static/skeleton/bannerSkeleton.png') no-repeat;
+        background-size: 100% 100%;
+      }
+      .news-list{
+        width: 100%;
+        margin-top: 0.24rem;
+      }
+      .news{
+        box-sizing: border-box;
+        width: 6.7rem;
+        height: 2rem;
+        margin: 0 auto;
+        background-image: url('static/skeleton/newsSkeleton.png');
+        background-size: 100% 72%;
+        background-position: 0 0.28rem;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      .news::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #EEEEEE;
+        transform-origin: 50% 0%;
+        transform: scaleY(0.5);
+      }</style><link href=./static/css/app.3eea2703ce1c1ca6cae3b3c5fa643192.css rel=stylesheet></head><body><div id=skeleton><div class=header>消息</div><div class=top-banner></div><div class=news-list></div></div><script>// 根据设备高度计算应该加载多少个消息块
+      var newsHeight = 100;
+      var topHeight = document.documentElement.clientWidth*267/375;
+      var newsHeight = document.documentElement.clientWidth*100/375;
+      var newsCount = Math.ceil(((document.documentElement.clientHeight)-topHeight)/newsHeight);
+      var newsList = document.querySelectorAll('.news-list')[0];
+      function addNews(){
+        var news = document.createElement('div');
+        news.setAttribute('class','news');
+        newsList.appendChild(news);
+      };
+      for(var i=1;i<=newsCount;i++){
+        addNews();
+      }</script><div id=app></div><script src=./static/fastclick.min.js></script><script src=./static/jsbridge.min.js></script><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.6c03bb523f42e0d62c83.js></script><script type=text/javascript src=./static/js/app.bfbf7bfd87919a6324f4.js></script></body></html>
